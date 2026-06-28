@@ -18,14 +18,19 @@ public class Saldo {
         System.out.println("Saldo disponivel na conta: " + saldo + "\n");
 
         while (opcoes !=4 ){
-            System.out.println(" MENU DE OPÇÕES \n");
 
-            System.out.println("1 - Consultar seu saldo ");
-            System.out.println("2 - Receber valor ");
-            System.out.println("3 - Transferir valor ");
-            System.out.println("4 - Sair \n");
+           String menu = """
+                   MENU DE OPÇÕES
+                   
+                   1 - Consultar seu saldo
+                   2 - Receber valor
+                   3 - Transferir valor
+                   4 - Sair
+                   
+                   Informe a opção desejada:\s
+                   """;
 
-            System.out.println("Infomre a opção desejada: ");
+            System.out.println(menu);
             opcoes = entrada.nextInt();
 
             switch (opcoes) {
@@ -36,7 +41,7 @@ public class Saldo {
                     System.out.println("Informe o valor a receber: ");
                     double valorReceber = entrada.nextDouble();
                     saldo += valorReceber;
-                    System.out.println("Valor recebido, seu salgo agora é " + saldo);
+                    System.out.println("Valor recebido, seu saldo agora é " + saldo);
                     break;
                 case 3:
                     System.out.println("Quantos reais você gostaria de transferir?: ");
